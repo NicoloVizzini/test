@@ -29,11 +29,9 @@ jobs:
           key: ${{ runner.os }}-${{ steps.get-date.outputs.date }}-${{ hashFiles('buildozer.spec') }}
 
       - name: Build with Buildozer
-        uses: ArtemSBulgakov/buildozer-action@v1
-        id: buildozer
-        with:
-          command: echo y | buildozer -v android debug
-          buildozer_version: master
+        run: |
+          docker start -a <container_name> -i
+          docker exec <container_name> buildozer -v android debug
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
