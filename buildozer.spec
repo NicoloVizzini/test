@@ -7,7 +7,7 @@ title = My Application
 package.name = myapp
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = vizz.schiz
+package.domain = vizz.schizv
 
 # (str) Source code where the main.py live
 source.dir = .
