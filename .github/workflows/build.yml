@@ -32,7 +32,7 @@ jobs:
         uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer
         with:
-          command: (echo y ; echo y; echo y;) | buildozer android deploy
+          command: (echo y ; echo y; echo y; echo y; ) | buildozer -v android deploy
           buildozer_version: master
 
       - name: Upload artifacts
