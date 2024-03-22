@@ -1,3 +1,5 @@
+env:
+  buildozer_version: git+https://github.com/antocuni/buildozer.git@antocuni/aab-support-and-fileprovider
 name: CI
 on:
   push:
