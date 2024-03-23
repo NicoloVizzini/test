@@ -41,6 +41,7 @@ jobs:
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer2
+        if: always()
         with:
           command: (echo y ; echo y; echo y; echo y; echo y; echo y ;) | buildozer -v android deploy 
 
@@ -48,6 +49,7 @@ jobs:
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
+        if: always()
         with:
           name: package
           path: ${{ steps.buildozer.outputs.filename }}
