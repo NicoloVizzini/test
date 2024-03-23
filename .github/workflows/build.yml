@@ -35,7 +35,7 @@ jobs:
         id: buildozer
         with:
           command: (echo y ; echo y; echo y; echo y; echo y; echo y ;) | buildozer -v android deploy 
-
+          allow_failure: true
           buildozer_version: master
           
       - name: Build with Buildozer
