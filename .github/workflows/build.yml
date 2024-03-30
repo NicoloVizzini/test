@@ -40,6 +40,14 @@ jobs:
           
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
+        id: buildozer11
+        with:
+          command: (echo y ; echo y; echo y; echo y; echo y; echo y ;) | buildozer -v android update 
+          allow_failure: true
+          buildozer_version: master
+          
+      - name: Build with Buildozer
+        uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer2
         if: always()
         with:
