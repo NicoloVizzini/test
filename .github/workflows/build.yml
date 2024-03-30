@@ -34,7 +34,7 @@ jobs:
         uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer
         with:
-          command: (echo y ; echo y; echo y; echo y; echo y; echo y ;) | buildozer -v android deploy 
+          command: (echo y ; echo y; echo y; echo y; echo y; echo y ;) | buildozer -v android update 
           allow_failure: true
           buildozer_version: master
           
@@ -43,7 +43,7 @@ jobs:
         id: buildozer2
         if: always()
         with:
-          command: (echo y ; echo y; echo y; echo y; echo y; echo y ;) | buildozer -v android deploy 
+          command:  buildozer -v android deploy 
 
           buildozer_version: master
 
